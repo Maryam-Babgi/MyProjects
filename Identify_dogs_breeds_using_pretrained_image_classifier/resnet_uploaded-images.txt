@@ -1,0 +1,79 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Owl_01.jpg  label:                        owl
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:                     Dog_01.jpg  label:                        dog
+ 4 key:                Gojo_Mug_01.jpg  label:                   gojo mug
+
+     MATCH:
+
+                    Owl_01.jpg: 
+Real:                        owl   Classifier: great grey owl, great gray owl, strix nebulosa
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                         kuvasz
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                         kuvasz
+
+               Gojo_Mug_01.jpg: 
+Real:                   gojo mug   Classifier:                     coffee mug
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+****THE RESULT DICT*** 
+ {'Owl_01.jpg': ['owl', 'great grey owl, great gray owl, strix nebulosa', 1, 0, 0], 'Dog_02.jpg': ['dog', 'kuvasz', 0, 1, 1], 'Dog_01.jpg': ['dog', 'kuvasz', 0, 1, 1], 'Gojo_Mug_01.jpg': ['gojo mug', 'coffee mug', 0, 0, 0]}
+
+     MATCH:
+
+                    Owl_01.jpg: 
+Real:                        owl   Classifier: great grey owl, great gray owl, strix nebulosa  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                         kuvasz  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                         kuvasz  
+PetLabelDog: 1  ClassLabelDog: 1
+
+               Gojo_Mug_01.jpg: 
+Real:                   gojo mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images : 2
+ 
+percentage key: pct_match             value: 25.0
+percentage key: pct_correct_dogs      value: 100.0
+percentage key: pct_correct_breed     value: 0.0
+percentage key: pct_correct_notdogs   value: 100.0
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:                         kuvasz
+Real:                        dog   Classifier:                         kuvasz
+
+** Total Elapsed Runtime: 0:0:4
