@@ -1,0 +1,8 @@
+*About the Project*
+
+This is my senior project "Kids Finder" trained model source code.
+
+"Kids Finder" is an application implemented using flutter framework and AI technology. 
+
+"Kids Finder" was designed and implemented especially to enhance the search process for missing children. This system utilizes an advanced facial recognition technology and computer vision algorithms to analyze images and compare detected faces with a comprehensive database of registered children. The main characteristic of Kids Finder system is its high accuracy rate in identifying missing children regardless of the aging difference and other external factors like the illumination. 
+
